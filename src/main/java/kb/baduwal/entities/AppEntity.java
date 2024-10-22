@@ -28,6 +28,39 @@ public class AppEntity {
     @JoinColumn(name = "user_id")
     private UserEntity user;
 
+    @JoinColumn(name = "incomeId")
+    private IncomeEntity income;
+
+    @JoinColumn(name = "eduId")
+    private EducationEntity education;
+
+    @JoinColumn(name = "kidId")
+    private KidEntity kid;
+
+    public EducationEntity getEducation() {
+        return education;
+    }
+
+    public void setEducation(EducationEntity education) {
+        this.education = education;
+    }
+
+    public KidEntity getKid() {
+        return kid;
+    }
+
+    public void setKid(KidEntity kid) {
+        this.kid = kid;
+    }
+
+    public IncomeEntity getIncome() {
+        return income;
+    }
+
+    public void setIncome(IncomeEntity income) {
+        this.income = income;
+    }
+
     public Long getCasNum() {
         return casNum;
     }

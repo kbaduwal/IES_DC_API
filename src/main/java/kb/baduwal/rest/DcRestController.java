@@ -28,7 +28,7 @@ public class DcRestController {
         if (status) {
             return new ResponseEntity<>("Plan Selection Saved", HttpStatus.OK);
         }
-        return new ResponseEntity<>("Problem Occured", HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>("Problem Occurred", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @PostMapping("/income")
@@ -37,7 +37,7 @@ public class DcRestController {
         if (status) {
             return new ResponseEntity<>("Income Saved", HttpStatus.OK);
         }
-        return new ResponseEntity<>("Problem Occured", HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>("Problem Occurred", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @PostMapping("/education")
@@ -46,7 +46,7 @@ public class DcRestController {
         if (status) {
             return new ResponseEntity<>("Education Saved", HttpStatus.OK);
         }
-        return new ResponseEntity<>("Problem Occured", HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>("Problem Occurred", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @PostMapping("/kids")
@@ -55,9 +55,10 @@ public class DcRestController {
         if (status) {
             return new ResponseEntity<>("Kids Saved", HttpStatus.OK);
         }
-        return new ResponseEntity<>("Problem Occured", HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>("Problem Occurred", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
+    //Case number will be path parameter
     @GetMapping("/dc-summary/{caseNum}")
     public ResponseEntity<DcSummary> getDcSummary(@PathVariable Long caseNum) {
         DcSummary summaryInfo = dcService.fetchSummaryInfo(caseNum);
